@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Viberr{% endblock %}</title>
+    <title>{% block title %}Vibre !{% endblock %}</title>
     {% load staticfiles %}
     <link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -24,30 +24,30 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{% url 'music:index' %}">Viberr</a>
+            <a class="navbar-brand" href="{% url 'music:index' %}">Vibre !</a>
         </div>
 
         <!-- Items -->
         <div class="collapse navbar-collapse" id="topNavBar">
             <ul class="nav navbar-nav">
                 <li class="{% block albums_active %}{% endblock %}"><a href="{% url 'music:index' %}"><span class="glyphicon glyphicon-cd" aria-hidden="true"></span>&nbsp; Albums</a></li>
-                <li class="{% block songs_active %}{% endblock %}"><a href="{% url 'music:songs' 'all' %}"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp; Songs</a></li>
+                <li class="{% block songs_active %}{% endblock %}"><a href="{% url 'music:songs' 'all' %}"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp; Músicas</a></li>
             </ul>
             <form class="navbar-form navbar-left" role="search" method="get" action="{% url 'music:index' %}">
                 <div class="form-group">
                     <input type="text" class="form-control" name="q" value="{{ request.GET.q }}">
                 </div>
-                <button type="submit" class="btn btn-default">Search</button>
+                <button type="submit" class="btn btn-default">Pesquisar</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="{% url 'music:create_album' %}">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Album
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Adicionar Album
                     </a>
                 </li>
                 <li>
                     <a href="{% url 'music:logout_user' %}">
-                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Logout
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Sair
                     </a>
                 </li>
             </ul>

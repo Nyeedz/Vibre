@@ -1,5 +1,5 @@
 {% extends 'music/base_visitor.html' %}
-{% block title %}Register{% endblock %}
+{% block title %}Cadastrar{% endblock %}
 {% block register_active %}active{% endblock %}
 
 {% block body %}
@@ -18,13 +18,13 @@
                         {% include 'music/form_template.html' %}
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button type="submit" class="btn btn-success">Enviar</button>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="panel-footer">
-                    Already have an account? <a href="{% url 'music:login_user' %}">Click here</a> to log in.
+                    Já possui uma conta ? Clique <a href="{% url 'music:login_user' %}">aqui</a> para entrar.
                 </div>
             </div>
         </div>

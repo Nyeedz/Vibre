@@ -1,5 +1,5 @@
 {% extends 'music/base.html' %}
-{% block title %}Add a New Album{% endblock %}
+{% block title %}Adicionar um Novo Album{% endblock %}
 {% block albums_active %}active{% endblock %}
 
 {% block body %}
@@ -10,7 +10,7 @@
         <div class="col-sm-12 col-md-7">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <h3>Add a New Album</h3>
+                    <h3>Adicionar um Novo Album</h3>
                     {% if error_message %}
                         <p><strong>{{ error_message }}</strong></p>
                     {% endif %}
@@ -19,7 +19,7 @@
                         {% include 'music/form_template.html' %}
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button type="submit" class="btn btn-success">Enviar</button>
                             </div>
                         </div>
                     </form>
@@ -30,16 +30,15 @@
         <div class="col-sm-12 col-md-5">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <h3>What is Viberr?</h3>
-                    <p>Viberr is an app that allows you to upload and store all of your music on the cloud.</p>
-                    <h3>How do I add music?</h3>
-                    <p>First, create a new album by filling out the form on this page. Once an album is created you will be able to add/upload songs.</p>
-                    <h3>What are some Album logo best practices?</h3>
+                    <h3>O que é o Vibre ?</h3>
+                    <p>Vibre é uma aplicação que permite você fazer o upload e salvar todas as suas músicas na nuvem !</p>
+                    <h3>Como eu adiciono uma música ?</h3>
+                    <p>Primeiro, crie um album nesta página. Uma vez criado, você será capaz de adicionar / uploadar suas músicas.</p>
+                    <h3>Algumas dicas para melhor uso da aplicação ?</h3>
                     <ul>
-                        <li>Have a resolution of 512x512</li>
-                        <li>Use common image formats such as .JPG, .GIF, or .PNG</li>
-                        <li>Remain under the 2MB limit.</li>
-                        <li>Square images look best</li>
+                        <li>A imagem do album deve ter uma resolução de 512x512</li>
+                        <li>Use um formato comum de imagem como .JPG, .GIF, ou .PNG</li>
+                        <li>Lembre-se que o limite é de 2MB.</li>
                     </ul>
                 </div>
             </div>

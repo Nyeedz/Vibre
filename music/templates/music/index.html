@@ -21,7 +21,7 @@
                             <h4>{{ album.artist }}</h4>
 
                             <!-- View Details -->
-                            <a href="{% url 'music:detail' album.id %}" class="btn btn-primary btn-sm" role="button">View Details</a>
+                            <a href="{% url 'music:detail' album.id %}" class="btn btn-primary btn-sm" role="button">Ver Detalhes</a>
 
                             <!-- Delete Album -->
                             <form action="{% url 'music:delete_album' album.id %}" method="post" style="display: inline;">
@@ -47,7 +47,7 @@
                 <br>
                 <a href="{% url 'music:create_album' %}">
                     <button type="button" class="btn btn-success">
-                        <span class="glyphicon glyphicon-plus"></span>&nbsp; Add an Album
+                        <span class="glyphicon glyphicon-plus"></span>&nbsp; Adicionar um Album
                     </button>
                 </a>
             </div>
@@ -58,7 +58,7 @@
     {% if songs %}
         <div class="row">
             <div class="col-sm-12">
-                <h3>Songs</h3>
+                <h3>Músicas</h3>
             </div>
             <div class="col-sm-12">
                 <div class="panel panel-default">
@@ -66,11 +66,11 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Song Title</th>
-                                    <th>Artist</th>
-                                    <th>Audio File</th>
+                                    <th>Título da Música</th>
+                                    <th>Artista</th>
+                                    <th>Arquivo de Áudio</th>
                                     <th>Album</th>
-                                    <th>Favorite</th>
+                                    <th>Favorito</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -81,7 +81,7 @@
                                         <td>
                                             <a target="_blank" href="{{ song.audio_file.url }}">
                                                 <button type="button" class="btn btn-success btn-xs">
-                                                    <span class="glyphicon glyphicon-play"></span>&nbsp; Play
+                                                    <span class="glyphicon glyphicon-play"></span>&nbsp; Tocar
                                                 </button>
                                             </a>
                                         </td>

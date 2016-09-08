@@ -1,5 +1,5 @@
 {% extends 'music/base.html' %}
-{% block title %}All Songs{% endblock %}
+{% block title %}Todas as Músicas{% endblock %}
 {% block songs_active %}active{% endblock %}
 
 {% block body %}
@@ -8,8 +8,8 @@
     <div class="row">
         <div class="col-sm-12">
             <ul class="nav nav-pills" style="margin-bottom: 10px;">
-                <li role="presentation" {% if filter_by == 'all' %}class="active"{% endif %}><a href="{% url 'music:songs' 'all' %}">View All</a></li>
-                <li role="presentation" {% if filter_by == 'favorites' %}class="active"{% endif %}><a href="{% url 'music:songs' 'favorites' %}">Favorites</a></li>
+                <li role="presentation" {% if filter_by == 'all' %}class="active"{% endif %}><a href="{% url 'music:songs' 'all' %}">Ver Todas</a></li>
+                <li role="presentation" {% if filter_by == 'favorites' %}class="active"{% endif %}><a href="{% url 'music:songs' 'favorites' %}">Favoritos</a></li>
             </ul>
         </div>
     </div>
@@ -23,11 +23,11 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Song Title</th>
-                                <th>Artist</th>
-                                <th>Audio File</th>
+                                <th>Título da Música</th>
+                                <th>Artista</th>
+                                <th>Arquivo de Áudio</th>
                                 <th>Album</th>
-                                <th>Favorite</th>
+                                <th>Favorito</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -38,7 +38,7 @@
                                     <td>
                                         <a target="_blank" href="{{ song.audio_file.url }}">
                                             <button type="button" class="btn btn-success btn-xs">
-                                                <span class="glyphicon glyphicon-play"></span>&nbsp; Play
+                                                <span class="glyphicon glyphicon-play"></span>&nbsp; Tocar
                                             </button>
                                         </a>
                                     </td>
